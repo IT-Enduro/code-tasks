@@ -1,0 +1,42 @@
+plugins {
+    id "idea"
+    id "org.jetbrains.kotlin.jvm" version "1.7.10"
+    id "com.adarshr.test-logger" version "3.2.0"
+}
+
+[compileKotlin, compileTestKotlin]*.kotlinOptions*.jvmTarget = "17"
+
+ext {
+    kotlinVersion = "1.7.10"
+    junitVersion = "5.7.0"
+    assertjVersion = "3.19.0"
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    testImplementation "org.assertj:assertj-core:$assertjVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+testlogger {
+    theme "mocha"
+}
