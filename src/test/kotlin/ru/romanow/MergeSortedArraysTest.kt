@@ -24,6 +24,7 @@ class MergeSortedArraysTest {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
                 of(intArrayOf(1, 2, 3, 0, 0, 0), 3, intArrayOf(2, 5, 6), 3, intArrayOf(1, 2, 2, 3, 5, 6)),
+                of(intArrayOf(4, 5, 6, 0, 0, 0), 3, intArrayOf(1, 2, 3), 3, intArrayOf(1, 2, 3, 4, 5, 6)),
                 of(intArrayOf(1), 1, intArrayOf(), 0, intArrayOf(1)),
                 of(intArrayOf(0), 0, intArrayOf(1), 1, intArrayOf(1)),
             )
