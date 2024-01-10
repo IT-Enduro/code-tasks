@@ -9,19 +9,24 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class FirstBadVersionTest {
+class ValidPalindromeTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Expect broken version {0} in array {1}")
-    fun firstBadVersion(
-        n: Int,
-        brokenVersion: Int,
+    @ParameterizedTest(name = "#{index} – Check string {0}")
+    fun isPalindrome(
+        s: String,
+        result: Boolean,
     ) {
-        val obj = FirstBadVersion(brokenVersion)
-        assertThat(obj.firstBadVersion(n)).isEqualTo(brokenVersion)
+        val obj = ValidPalindrome()
+        assertThat(obj.isPalindrome(s)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
-        override fun provideArguments(context: ExtensionContext): Stream<Arguments> = Stream.of(of(5, 4), of(1, 1))
+        override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
+            Stream.of(
+                of("A man, a plan, a canal: Panama", true),
+                of("race a car", false),
+                of(" ", true),
+            )
     }
 }

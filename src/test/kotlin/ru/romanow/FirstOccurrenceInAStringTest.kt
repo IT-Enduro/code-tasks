@@ -9,19 +9,21 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class FirstBadVersionTest {
+class FirstOccurrenceInAStringTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Expect broken version {0} in array {1}")
-    fun firstBadVersion(
-        n: Int,
-        brokenVersion: Int,
+    @ParameterizedTest(name = "#{index} – Occurrence {1} in a string {0}")
+    fun strStr(
+        haystack: String,
+        needle: String,
+        result: Int,
     ) {
-        val obj = FirstBadVersion(brokenVersion)
-        assertThat(obj.firstBadVersion(n)).isEqualTo(brokenVersion)
+        val obj = FirstOccurrenceInAString()
+        assertThat(obj.strStr(haystack, needle)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
-        override fun provideArguments(context: ExtensionContext): Stream<Arguments> = Stream.of(of(5, 4), of(1, 1))
+        override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
+            Stream.of(of("sadbutsad", "sad", 0), of("leetcode", "leeto", -1), of("a", "a", 0), of("a", "asd", -1))
     }
 }

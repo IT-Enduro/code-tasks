@@ -1,0 +1,10 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+ktlint_standard_no-consecutive-blank-lines = disabled
+ktlint_standard_no-empty-first-line-in-class-body = disabled

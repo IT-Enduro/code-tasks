@@ -1,9 +1,7 @@
 package ru.romanow
 
-
 // https://leetcode.com/problems/first-bad-version/
 class FirstBadVersion(brokenVersion: Int) : VersionControl(brokenVersion) {
-
     override fun firstBadVersion(n: Int): Int {
         var left = 0
         var right = n
@@ -24,7 +22,7 @@ class FirstBadVersion(brokenVersion: Int) : VersionControl(brokenVersion) {
 
 abstract class VersionControl(private val brokenVersion: Int) {
     protected fun isBadVersion(version: Int): Boolean {
-        return version >= brokenVersion;
+        return version >= brokenVersion
     }
 
     abstract fun firstBadVersion(n: Int): Int
