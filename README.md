@@ -8,3 +8,5 @@
 3. [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) – [solution](src/main/kotlin/ru/romanow/FirstOccurrenceInAString.kt), [test](src/test/kotlin/ru/romanow/FirstOccurrenceInAStringTest.kt)
 4. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) – [solution](src/main/kotlin/ru/romanow/LongestCommonPrefix.kt), [test](src/test/kotlin/ru/romanow/LongestCommonPrefixTest.kt)
 5. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) – [solution](src/main/kotlin/ru/romanow/ValidPalindrome.kt), [test](src/test/kotlin/ru/romanow/ValidPalindromeTest.kt)
+6. [Two Sum](https://leetcode.com/problems/two-sum/) – [solution](src/main/kotlin/ru/romanow/TwoSum.kt), [test](src/test/kotlin/ru/romanow/TwoSumTest.kt)
+7. [Plus One](https://leetcode.com/problems/plus-one/) – [solution](src/main/kotlin/ru/romanow/PlusOne.kt), [test](src/test/kotlin/ru/romanow/PlusOneTest.kt)
