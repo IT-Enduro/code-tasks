@@ -13,10 +13,7 @@ class FirstBadVersionTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Expect broken version {0} in array {1}")
-    fun firstBadVersion(
-        n: Int,
-        brokenVersion: Int,
-    ) {
+    fun firstBadVersion(n: Int, brokenVersion: Int) {
         val obj = FirstBadVersion(brokenVersion)
         assertThat(obj.firstBadVersion(n)).isEqualTo(brokenVersion)
     }

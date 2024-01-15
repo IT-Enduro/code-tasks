@@ -13,13 +13,7 @@ class MergeSortedArraysTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Merge arrays {0} and {1}")
-    fun merge(
-        nums1: IntArray,
-        m: Int,
-        nums2: IntArray,
-        n: Int,
-        result: IntArray,
-    ) {
+    fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int, result: IntArray) {
         val obj = MergeSortedArrays()
         obj.merge(nums1, m, nums2, n)
         assertThat(nums1).isEqualTo(result)

@@ -12,11 +12,7 @@ class TwoSumTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Find two numbers {0} for sum {1}")
-    fun twoSum(
-        nums: IntArray,
-        target: Int,
-        result: IntArray,
-    ) {
+    fun twoSum(nums: IntArray, target: Int, result: IntArray) {
         val obj = TwoSum()
         Assertions.assertThat(obj.twoSum(nums, target)).isEqualTo(result)
     }

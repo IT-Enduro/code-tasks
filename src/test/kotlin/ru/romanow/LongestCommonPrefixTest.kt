@@ -13,10 +13,7 @@ class LongestCommonPrefixTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Occurrence {1} in a string {0}")
-    fun longestCommonPrefix(
-        strs: Array<String>,
-        result: String,
-    ) {
+    fun longestCommonPrefix(strs: Array<String>, result: String) {
         val obj = LongestCommonPrefix()
         Assertions.assertThat(obj.longestCommonPrefix(strs)).isEqualTo(result)
     }

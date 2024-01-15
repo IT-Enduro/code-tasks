@@ -8,21 +8,21 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class PlusOneTest {
+class RomanToIntegerTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Plus 1 to {0}")
-    fun plusOne(digits: IntArray, result: IntArray) {
-        val obj = PlusOne()
-        Assertions.assertThat(obj.plusOne(digits)).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – Roman {0} is {1}")
+    fun romanToInt(s: String, result: Int) {
+        val obj = RomanToInteger()
+        Assertions.assertThat(obj.romanToInt(s)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
-                Arguments.of(intArrayOf(1, 2, 3), intArrayOf(1, 2, 4)),
-                Arguments.of(intArrayOf(4, 3, 2, 1), intArrayOf(4, 3, 2, 2)),
-                Arguments.of(intArrayOf(9), intArrayOf(1, 0)),
+                Arguments.of("III", 3),
+                Arguments.of("LVIII", 58),
+                Arguments.of("MCMXCIV", 1994)
             )
     }
 }
