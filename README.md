@@ -12,5 +12,10 @@
 5. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) – [solution](src/main/kotlin/ru/romanow/ValidPalindrome.kt), [test](src/test/kotlin/ru/romanow/ValidPalindromeTest.kt)
 6. [Two Sum](https://leetcode.com/problems/two-sum/) – [solution](src/main/kotlin/ru/romanow/TwoSum.kt), [test](src/test/kotlin/ru/romanow/TwoSumTest.kt)
 7. [Plus One](https://leetcode.com/problems/plus-one/) – [solution](src/main/kotlin/ru/romanow/PlusOne.kt), [test](src/test/kotlin/ru/romanow/PlusOneTest.kt)
-8. [Roman to Integer](https://leetcode.com/problems/roman-to-integer) – [solution](src/main/kotlin/ru/romanow/RomanToInteger.kt), [test](src/test/kotlin/ru/romanow/RomanToIntegerTest.kt)
+8. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) – [solution](src/main/kotlin/ru/romanow/RomanToInteger.kt), [test](src/test/kotlin/ru/romanow/RomanToIntegerTest.kt)
 9. [Remove Element](https://leetcode.com/problems/remove-element/) – [solution](src/main/kotlin/ru/romanow/RemoveElement.kt), [test](src/test/kotlin/ru/romanow/RemoveElementTest.kt)
+
+## Medium level
+
+1. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) – [solution](src/main/kotlin/ru/romanow/ProductOfArrayExceptSelf.kt), [test](src/test/kotlin/ru/romanow/ProductOfArrayExceptSelfTest.kt)
+2. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) – [solution](src/main/kotlin/ru/romanow/IntegerToRoman.kt), [test](src/test/kotlin/ru/romanow/IntegerToRomanTest.kt)
