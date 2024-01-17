@@ -1,6 +1,14 @@
 package ru.romanow
 
-// https://leetcode.com/problems/plus-one/
+/**
+ * Вам дано большое целое число, представленное в виде целочисленного массива цифр,
+ * где каждая цифра `[i]` — это `i`-я цифра целого числа. Цифры упорядочены от наиболее
+ * значимого к наименее значимому, слева направо. Большое целое число не содержит ведущих нулей.
+ *
+ * Увеличьте целое число на единицу и верните полученный массив цифр.
+ *
+ * [https://leetcode.com/problems/plus-one/](https://leetcode.com/problems/plus-one/)
+ */
 class PlusOne {
     fun plusOne(digits: IntArray): IntArray {
         val n: Int = digits.size

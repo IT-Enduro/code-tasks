@@ -1,6 +1,15 @@
 package ru.romanow
 
-// https://leetcode.com/problems/product-of-array-except-self
+/**
+ *  Дан целочисленный массив `nums`, верните ответ массива, такой, что ответ `[i]`
+ *  равен произведению всех элементов nums, кроме `nums[i]`.
+ *
+ * Произведение любого префикса или суффикса чисел гарантированно вписывается в 32-битное целое число.
+ *
+ * Вы должны написать алгоритм, который работает за время `O(n)` и не использует операцию деления.
+ *
+ * [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)
+ */
 class ProductOfArrayExceptSelf {
     fun productExceptSelf(nums: IntArray): IntArray {
         var zeros = 0

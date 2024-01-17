@@ -1,6 +1,14 @@
 package ru.romanow
 
-// https://leetcode.com/problems/valid-palindrome/
+/**
+ * Фраза является палиндромом, если после преобразования всех заглавных букв в строчные
+ * и удаления всех небуквенно-цифровых символов она читается одинаково и вперед, и назад.
+ * Буквенно-цифровые символы включают буквы и цифры.
+ *
+ * Дана строка `s`, верните `true`, если это палиндром, `false` иначе.
+ *
+ * [https://leetcode.com/problems/valid-palindrome/](https://leetcode.com/problems/valid-palindrome/)
+ */
 class ValidPalindrome {
     fun isPalindrome(s: String): Boolean {
         var start = 0
