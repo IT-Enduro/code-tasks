@@ -22,3 +22,5 @@
 3. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) – [solution](src/main/kotlin/ru/romanow/SearchIn2dMatrix.kt), [test](src/test/kotlin/ru/romanow/SearchIn2dMatrixTest.kt)
 4. [Summary Ranges](https://leetcode.com/problems/summary-ranges/) – [solution](src/main/kotlin/ru/romanow/SummaryRanges.kt), [test](src/test/kotlin/ru/romanow/SummaryRangesTest.kt)
 5. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) – [solution](src/main/kotlin/ru/romanow/MergeIntervals.kt), [test](src/test/kotlin/ru/romanow/MergeIntervalsTest.kt)
+6. [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) – [solution](src/main/kotlin/ru/romanow/ValidSudoku.kt), [test](src/test/kotlin/ru/romanow/ValidSudokuTest.kt)
+7. [LRU Cache](https://leetcode.com/problems/lru-cache/) – [solution](src/main/kotlin/ru/romanow/LRUCache.kt), [test](src/test/kotlin/ru/romanow/LRUCacheTest.kt)
