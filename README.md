@@ -14,6 +14,7 @@
 7. [Plus One](https://leetcode.com/problems/plus-one/) – [solution](src/main/kotlin/ru/romanow/PlusOne.kt), [test](src/test/kotlin/ru/romanow/PlusOneTest.kt)
 8. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) – [solution](src/main/kotlin/ru/romanow/RomanToInteger.kt), [test](src/test/kotlin/ru/romanow/RomanToIntegerTest.kt)
 9. [Remove Element](https://leetcode.com/problems/remove-element/) – [solution](src/main/kotlin/ru/romanow/RemoveElement.kt), [test](src/test/kotlin/ru/romanow/RemoveElementTest.kt)
+10. [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) – [solution](src/main/kotlin/ru/romanow/MiddleOfTheLinkedList.kt), [test](src/test/kotlin/ru/romanow/MiddleOfTheLinkedListTest.kt)
 
 ## Medium level
 
