@@ -64,4 +64,3 @@ enum class OperationType {
     PUT,
     GET
 }
-
