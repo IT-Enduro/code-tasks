@@ -15,14 +15,77 @@ package ru.romanow
  *
  * [https://leetcode.com/problems/lru-cache/](https://leetcode.com/problems/lru-cache/)
  */
-class LRUCache(
-    private val capacity: Int
-) {
+class LRUCache(private val capacity: Int) {
 
+    private val dict: MutableMap<Int, Node>
+    private val head: Node
+    private val tail: Node
+
+    init {
+        this.dict = HashMap(capacity)
+        this.head = Node()
+        this.tail = Node(prev = head)
+        this.head.next = this.tail
+    }
+
+    // если берем ключ, то добавляем эту в голову
     fun get(key: Int): Int {
+        if (dict.containsKey(key)) {
+            val node = dict[key]!!
+            deleteNode(node)
+            addToHead(node)
+            return node.value!!
+        }
         return -1
     }
 
     fun put(key: Int, value: Int) {
+        if (dict.containsKey(key)) {
+            // если запись есть, то она всплывает наверх
+            val node = dict[key]!!
+            node.value = value
+            deleteNode(node)
+            addToHead(node)
+        } else {
+            if (dict.size == capacity) {
+                // удаляем последнюю запись
+                val node = tail.prev!!
+                dict.remove(node.key)
+                deleteNode(node)
+            }
+            val node = Node(key = key, value = value)
+            addToHead(node)
+            dict[key] = node
+        }
+    }
+
+    private fun addToHead(node: Node) {
+        val next = head.next!!
+        // head ссылается на новую запись
+        head.next = node
+        // node.prev ссылается на head
+        node.prev = head
+        // node.next ссылается на предыдущую запись
+        node.next = next
+        // предыдущая запись ссылается next.prev на текущую
+        next.prev = node
+    }
+
+    private fun deleteNode(node: Node) {
+        val prev = node.prev
+        // указатель next от предыдущей записи ссылается на следующую
+        node.prev?.next = node.next
+        node.next?.prev = prev
+    }
+}
+
+data class Node(
+    var key: Int? = null,
+    var value: Int? = null,
+    var prev: Node? = null,
+    var next: Node? = null
+) {
+    override fun toString(): String {
+        return "Node(key=$key, value=$value, next.key=${next?.key}, prev.key=${prev?.key}"
     }
 }
