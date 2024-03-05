@@ -8,21 +8,24 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class PlusOneTest {
+class FlattenBinaryTreeToLinkedListTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Plus 1 to {0}")
-    fun plusOne(digits: IntArray, result: IntArray) {
-        val obj = PlusOne()
-        Assertions.assertThat(obj.plusOne(digits)).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – Binary tree {0} flatten into {1}")
+    fun flatten(values: List<Int>, result: List<Int>) {
+        val obj = FlattenBinaryTreeToLinkedList()
+        Assertions.assertThat(obj.flatten(null)).isEqualTo(null)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
-                Arguments.of(intArrayOf(1, 2, 3), intArrayOf(1, 2, 4)),
-                Arguments.of(intArrayOf(4, 3, 2, 1), intArrayOf(4, 3, 2, 2)),
-                Arguments.of(intArrayOf(9), intArrayOf(1, 0))
+                Arguments.of(
+                    listOf(1, 2, 5, 3, 4, null, 6),
+                    listOf(1, null, 2, null, 3, null, 4, null, 5, null, 6)
+                ),
+                Arguments.of(listOf<Int?>(), listOf<Int?>()),
+                Arguments.of(listOf<Int?>(0), listOf<Int?>(0))
             )
     }
 }

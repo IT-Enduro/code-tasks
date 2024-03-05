@@ -1,4 +1,4 @@
-package ru.romanow
+package ru.romanow.models
 
 class ListNode {
     var value: Int? = null

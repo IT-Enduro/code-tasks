@@ -16,6 +16,7 @@
 9. [Remove Element](https://leetcode.com/problems/remove-element/) – [solution](src/main/kotlin/ru/romanow/RemoveElement.kt), [test](src/test/kotlin/ru/romanow/RemoveElementTest.kt)
 10. [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) – [solution](src/main/kotlin/ru/romanow/MiddleOfTheLinkedList.kt), [test](src/test/kotlin/ru/romanow/MiddleOfTheLinkedListTest.kt)
 11. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) – [solution](src/main/kotlin/ru/romanow/HammingWeight.kt), [test](src/test/kotlin/ru/romanow/HammingWeightTest.kt)
+12. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) – [solution](src/main/kotlin/ru/romanow/LinkedListCycle.kt), [test](src/test/kotlin/ru/romanow/LinkedListCycleTest.kt)
 
 ## Medium level
 
@@ -27,3 +28,5 @@
 6. [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) – [solution](src/main/kotlin/ru/romanow/ValidSudoku.kt), [test](src/test/kotlin/ru/romanow/ValidSudokuTest.kt)
 7. [LRU Cache](https://leetcode.com/problems/lru-cache/) – [solution](src/main/kotlin/ru/romanow/LRUCache.kt), [test](src/test/kotlin/ru/romanow/LRUCacheTest.kt)
 8. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) – [solution](src/main/kotlin/ru/romanow/MaximumSubarray.kt), [test](src/test/kotlin/ru/romanow/MaximumSubarrayTest.kt)
+9. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) – [solution](src/main/kotlin/ru/romanow/ReverseWordsInAString.kt), [test](src/test/kotlin/ru/romanow/ReverseWordsInAStringTest.kt)
+10. [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) – [solution](src/main/kotlin/ru/romanow/FlattenBinaryTreeToLinkedList.kt), [test](src/test/kotlin/ru/romanow/FlattenBinaryTreeToLinkedListTest.kt)

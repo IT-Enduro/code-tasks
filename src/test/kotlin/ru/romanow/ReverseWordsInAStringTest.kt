@@ -8,21 +8,21 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class PlusOneTest {
+class ReverseWordsInAStringTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Plus 1 to {0}")
-    fun plusOne(digits: IntArray, result: IntArray) {
-        val obj = PlusOne()
-        Assertions.assertThat(obj.plusOne(digits)).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – Reverse {0} words order is {1}")
+    fun reverseWords(s: String, result: String) {
+        val obj = ReverseWordsInAString()
+        Assertions.assertThat(obj.reverseWords(s)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
-                Arguments.of(intArrayOf(1, 2, 3), intArrayOf(1, 2, 4)),
-                Arguments.of(intArrayOf(4, 3, 2, 1), intArrayOf(4, 3, 2, 2)),
-                Arguments.of(intArrayOf(9), intArrayOf(1, 0))
+                Arguments.of("the sky is blue", "blue is sky the"),
+                Arguments.of("  hello world  ", "world hello"),
+                Arguments.of("a good   example", "example good a")
             )
     }
 }
