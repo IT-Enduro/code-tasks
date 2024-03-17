@@ -6,15 +6,45 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
+import ru.romanow.models.TreeNode
+import java.util.LinkedList
+import java.util.Queue
+import java.util.Stack
 import java.util.stream.Stream
 
 class FlattenBinaryTreeToLinkedListTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Binary tree {0} flatten into {1}")
-    fun flatten(values: List<Int>, result: List<Int>) {
+    fun flatten(items: List<Int?>, result: List<Int>) {
+        var root: TreeNode? = null
+        if (items.isNotEmpty()) {
+            root = TreeNode(items[0])
+            val stack = LinkedList<TreeNode>()
+            stack.add(root)
+
+            var i = 0
+            while (stack.isNotEmpty()) {
+                val head = stack.pop()
+
+                var left: TreeNode? = null
+                if (++i < items.size && items[i] != null) {
+                    left = TreeNode(items[i])
+                    stack.add(left)
+                }
+                var right: TreeNode? = null
+                if (++i < items.size && items[i] != null) {
+                    right = TreeNode(items[i])
+                    stack.add(right)
+                }
+
+                head.left = left
+                head.right = right
+            }
+        }
+
         val obj = FlattenBinaryTreeToLinkedList()
-        Assertions.assertThat(obj.flatten(null)).isEqualTo(null)
+        Assertions.assertThat(obj.flatten(root)).isEqualTo(null)
     }
 
     internal class ValueProvider : ArgumentsProvider {

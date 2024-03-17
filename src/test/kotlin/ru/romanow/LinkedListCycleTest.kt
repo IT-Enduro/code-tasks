@@ -14,22 +14,19 @@ class LinkedListCycleTest {
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Does list {0} has cycles: {1}")
     fun hasCycle(values: List<Int>, result: Boolean) {
-        var head: ListNode? = null
-        if (values.isNotEmpty()) {
-            head = ListNode(values[0])
-            var current = head
+        val head = ListNode(values[0])
+        var current: ListNode? = head
 
-            val items = HashMap<Int, ListNode>()
-            for (i in 1 until values.size) {
-                val value = values[i]
-                if (values[i] in items) {
-                    current?.next = items[value]
-                } else {
-                    val node = ListNode(value)
-                    items[value] = node
-                    current?.next = node
-                    current = current?.next
-                }
+        val items = HashMap<Int, ListNode>()
+        for (i in 1 until values.size) {
+            val value = values[i]
+            if (values[i] in items) {
+                current?.next = items[value]
+            } else {
+                val node = ListNode(value)
+                items[value] = node
+                current?.next = node
+                current = current?.next
             }
         }
 

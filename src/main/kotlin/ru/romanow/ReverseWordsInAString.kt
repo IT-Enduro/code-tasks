@@ -16,6 +16,24 @@ package ru.romanow
  */
 class ReverseWordsInAString {
     fun reverseWords(s: String): String {
-        return ""
+        var result = ""
+        var i = s.length - 1
+        while (i >= 0) {
+            while (i >= 0 && s[i] == ' ') {
+                i--
+            }
+
+            val end = i + 1
+            while (i >= 0 && s[i] != ' ') {
+                i--
+            }
+
+            if (i + 1 < end) {
+                val whitespace = if (result.isNotBlank()) " " else ""
+                result = result + whitespace + s.substring(i + 1, end)
+            }
+            i--
+        }
+        return result
     }
 }

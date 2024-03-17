@@ -12,4 +12,8 @@ class ListNode {
         this.value = value
         this.next = next
     }
+
+    override fun toString(): String {
+        return "ListNode(value=$value, next=${next?.value})"
+    }
 }

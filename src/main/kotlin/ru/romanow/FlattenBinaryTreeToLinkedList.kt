@@ -1,6 +1,6 @@
 package ru.romanow
 
-import javax.swing.tree.TreeNode
+import ru.romanow.models.TreeNode
 
 /**
  * Дано двоичное дерево, требуется развернуть его в связный список:
