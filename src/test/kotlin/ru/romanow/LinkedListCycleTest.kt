@@ -17,7 +17,7 @@ class LinkedListCycleTest {
         val head = ListNode(values[0])
         var current: ListNode? = head
 
-        val items = HashMap<Int, ListNode>()
+        val items = mutableMapOf(values[0] to head)
         for (i in 1 until values.size) {
             val value = values[i]
             if (values[i] in items) {

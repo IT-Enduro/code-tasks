@@ -8,8 +8,6 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import ru.romanow.models.TreeNode
 import java.util.LinkedList
-import java.util.Queue
-import java.util.Stack
 import java.util.stream.Stream
 
 class FlattenBinaryTreeToLinkedListTest {

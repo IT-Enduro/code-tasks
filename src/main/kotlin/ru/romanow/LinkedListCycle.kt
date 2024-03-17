@@ -14,6 +14,15 @@ import ru.romanow.models.ListNode
  */
 class LinkedListCycle {
     fun hasCycle(head: ListNode?): Boolean {
-        return false
+        if (head == null) {
+            return false
+        }
+        var slow = head
+        var fast = head.next
+        while (fast?.next != null && fast != slow) {
+            slow = slow?.next
+            fast = fast.next?.next
+        }
+        return fast == slow
     }
 }
