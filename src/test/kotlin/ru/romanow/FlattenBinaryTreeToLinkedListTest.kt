@@ -34,8 +34,6 @@ class FlattenBinaryTreeToLinkedListTest {
 
                 if (head != null && (head.left != null || head.right != null)) {
                     queue.add(head.left)
-
-                   1
                     queue.add(head.right)
                 }
             }

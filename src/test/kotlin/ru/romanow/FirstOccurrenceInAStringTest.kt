@@ -12,7 +12,7 @@ import java.util.stream.Stream
 class FirstOccurrenceInAStringTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Occurrence {1} in a string {0}")
+    @ParameterizedTest(name = "#{index} – Occurrence {1} index in a string {0} is {2}")
     fun strStr(haystack: String, needle: String, result: Int) {
         val obj = FirstOccurrenceInAString()
         assertThat(obj.strStr(haystack, needle)).isEqualTo(result)
