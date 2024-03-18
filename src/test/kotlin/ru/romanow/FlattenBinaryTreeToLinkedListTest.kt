@@ -25,15 +25,19 @@ class FlattenBinaryTreeToLinkedListTest {
 
     private fun buildListFromTree(root: TreeNode?): List<Int?> {
         val list = ArrayList<Int?>()
-        val queue = LinkedList<TreeNode?>()
-        queue.add(root)
-        while (queue.isNotEmpty()) {
-            val head = queue.pop()
-            list.add(head?.value)
+        if (root != null) {
+            val queue = LinkedList<TreeNode?>()
+            queue.add(root)
+            while (queue.isNotEmpty()) {
+                val head = queue.pop()
+                list.add(head?.value)
 
-            if (head != null && (head.left != null || head.right != null)) {
-                queue.add(head.left)
-                queue.add(head.right)
+                if (head != null && (head.left != null || head.right != null)) {
+                    queue.add(head.left)
+
+                   1
+                    queue.add(head.right)
+                }
             }
         }
 

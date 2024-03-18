@@ -15,9 +15,20 @@ class FlattenBinaryTreeToLinkedList {
         flattenSubtree(root)
     }
 
-    private fun flattenSubtree(node: TreeNode?) {
+    private fun flattenSubtree(node: TreeNode?): TreeNode? {
         if (node == null) {
-            return
+            return null
         }
+
+        val right = node.right
+        node.right = node.left
+        node.left = null
+        val leftSubtree = flattenSubtree(node.right)
+        if (leftSubtree == null) {
+            node.right = right
+        } else {
+            leftSubtree.right = right
+        }
+        return flattenSubtree(right) ?: leftSubtree ?: node
     }
 }
