@@ -11,7 +11,13 @@ import ru.romanow.models.TreeNode
  * [https://leetcode.com/problems/flatten-binary-tree-to-linked-list/](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
  */
 class FlattenBinaryTreeToLinkedList {
-    fun flatten(root: TreeNode?): List<TreeNode?> {
-        return listOf()
+    fun flatten(root: TreeNode?) {
+        flattenSubtree(root)
+    }
+
+    private fun flattenSubtree(node: TreeNode?) {
+        if (node == null) {
+            return
+        }
     }
 }

@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -15,34 +15,58 @@ class FlattenBinaryTreeToLinkedListTest {
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Binary tree {0} flatten into {1}")
     fun flatten(items: List<Int?>, result: List<Int>) {
+        val root = buildTreeFromList(items)
+
+        val obj = FlattenBinaryTreeToLinkedList()
+        obj.flatten(root)
+        val list = buildListFromTree(root)
+        assertThat(list).isEqualTo(result)
+    }
+
+    private fun buildListFromTree(root: TreeNode?): List<Int?> {
+        val list = ArrayList<Int?>()
+        val queue = LinkedList<TreeNode?>()
+        queue.add(root)
+        while (queue.isNotEmpty()) {
+            val head = queue.pop()
+            list.add(head?.value)
+
+            if (head != null && (head.left != null || head.right != null)) {
+                queue.add(head.left)
+                queue.add(head.right)
+            }
+        }
+
+        return list
+    }
+
+    private fun buildTreeFromList(items: List<Int?>): TreeNode? {
         var root: TreeNode? = null
         if (items.isNotEmpty()) {
             root = TreeNode(items[0])
-            val stack = LinkedList<TreeNode>()
-            stack.add(root)
+            val queue = LinkedList<TreeNode?>()
+            queue.add(root)
 
             var i = 0
-            while (stack.isNotEmpty()) {
-                val head = stack.pop()
+            while (queue.isNotEmpty()) {
+                val head = queue.pop()
 
                 var left: TreeNode? = null
                 if (++i < items.size && items[i] != null) {
                     left = TreeNode(items[i])
-                    stack.add(left)
+                    queue.add(left)
                 }
                 var right: TreeNode? = null
                 if (++i < items.size && items[i] != null) {
                     right = TreeNode(items[i])
-                    stack.add(right)
+                    queue.add(right)
                 }
 
-                head.left = left
-                head.right = right
+                head?.left = left
+                head?.right = right
             }
         }
-
-        val obj = FlattenBinaryTreeToLinkedList()
-        Assertions.assertThat(obj.flatten(root)).isEqualTo(null)
+        return root
     }
 
     internal class ValueProvider : ArgumentsProvider {
