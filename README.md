@@ -17,6 +17,9 @@
 10. [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) – [solution](src/main/kotlin/ru/romanow/MiddleOfTheLinkedList.kt), [test](src/test/kotlin/ru/romanow/MiddleOfTheLinkedListTest.kt), **TODO**
 11. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) – [solution](src/main/kotlin/ru/romanow/HammingWeight.kt), [test](src/test/kotlin/ru/romanow/HammingWeightTest.kt)
 12. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) – [solution](src/main/kotlin/ru/romanow/LinkedListCycle.kt), [test](src/test/kotlin/ru/romanow/LinkedListCycleTest.kt), **TODO**
+13. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) – [solution](src/main/kotlin/ru/romanow/ValidParentheses.kt), [test](src/test/kotlin/ru/romanow/ValidParenthesesTest.kt), **TODO**
+14. [Missing Number](https://leetcode.com/problems/missing-number/) – [solution](src/main/kotlin/ru/romanow/MissingNumber.kt), [test](src/test/kotlin/ru/romanow/MissingNumberTest.kt)
+15. [Power of Three](https://leetcode.com/problems/power-of-three/) – [solution](src/main/kotlin/ru/romanow/PowerOfThree.kt), [test](src/test/kotlin/ru/romanow/PowerOfThreeTest.kt)
 
 ## Medium level
 
@@ -30,3 +33,4 @@
 8. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) – [solution](src/main/kotlin/ru/romanow/MaximumSubarray.kt), [test](src/test/kotlin/ru/romanow/MaximumSubarrayTest.kt), **TODO**
 9. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) – [solution](src/main/kotlin/ru/romanow/ReverseWordsInAString.kt), [test](src/test/kotlin/ru/romanow/ReverseWordsInAStringTest.kt), **TODO**
 10. [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) – [solution](src/main/kotlin/ru/romanow/FlattenBinaryTreeToLinkedList.kt), [test](src/test/kotlin/ru/romanow/FlattenBinaryTreeToLinkedListTest.kt), **TODO**
+11. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) – [solution](src/main/kotlin/ru/romanow/EvaluateReversePolishNotation.kt), [test](src/test/kotlin/ru/romanow/EvaluateReversePolishNotationTest.kt), **TODO**
