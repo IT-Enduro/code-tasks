@@ -1,5 +1,7 @@
 package ru.romanow
 
+import java.util.Stack
+
 /**
  * Дана строка `s`, содержащая символы `(`, `)`, `{`, `}`, `[` и `]`, определить,
  * является ли входная строка валидным скобочным выражением.
@@ -13,6 +15,18 @@ package ru.romanow
  */
 class ValidParentheses {
     fun isValid(s: String): Boolean {
-        return false
+        val stack = Stack<Char>()
+        for (chr in s) {
+            if (chr == '(') {
+                stack.push(')')
+            } else if (chr == '[') {
+                stack.push(']')
+            } else if (chr == '{') {
+                stack.push('}')
+            } else if (stack.isEmpty() || chr != stack.pop()) {
+                return false
+            }
+        }
+        return stack.empty()
     }
 }

@@ -7,6 +7,10 @@ package ru.romanow
  */
 class MissingNumber {
     fun missingNumber(nums: IntArray): Int {
-        return 0
+        val arr = Array(nums.size + 1) { false }
+        for (n in nums) {
+            arr[n] = true
+        }
+        return arr.indexOfFirst { !it }
     }
 }

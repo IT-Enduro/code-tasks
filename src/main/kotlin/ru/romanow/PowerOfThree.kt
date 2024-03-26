@@ -8,6 +8,12 @@ package ru.romanow
  */
 class PowerOfThree {
     fun isPowerOfThree(n: Int): Boolean {
-        return false
+        var result = n > 0
+        var k = n
+        while (k > 1 && result) {
+            result = k % 3 == 0
+            k /= 3
+        }
+        return result
     }
 }

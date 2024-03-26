@@ -1,5 +1,7 @@
 package ru.romanow
 
+import java.util.Stack
+
 /**
  * Дан набор строк, представляющий арифметическое выражение в обратной польской нотации.
  * Требуется вычислить выражение и вернуть результат в виде целочисленное число.
@@ -16,6 +18,25 @@ package ru.romanow
  */
 class EvaluateReversePolishNotation {
     fun evalRPN(tokens: Array<String>): Int {
-        return 0
+        val stack = Stack<Int>()
+        val operations = arrayOf("+", "-", "*", "/")
+        for (token in tokens) {
+            if (token in operations) {
+                val left = stack.pop()
+                val right = stack.pop()
+                val result =
+                    when (token) {
+                        "+" -> right + left
+                        "-" -> right - left
+                        "*" -> right * left
+                        "/" -> right / left
+                        else -> throw IllegalArgumentException("Wrong token")
+                    }
+                stack.push(result)
+            } else {
+                stack.push(token.toInt())
+            }
+        }
+        return stack.pop()
     }
 }

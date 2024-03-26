@@ -1,6 +1,5 @@
 package ru.romanow
 
-import jdk.internal.org.jline.utils.Colors.s
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
@@ -15,7 +14,7 @@ class PowerOfThreeTest {
     @ParameterizedTest(name = "#{index} – is the {0} a power of three {1}")
     fun isPowerOfThree(n: Int, result: Boolean) {
         val obj = PowerOfThree()
-        assertThat(obj.isPowerOfThree(s)).isEqualTo(result)
+        assertThat(obj.isPowerOfThree(n)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
