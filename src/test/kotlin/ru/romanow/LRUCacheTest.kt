@@ -6,8 +6,8 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
-import ru.romanow.OperationType.GET
-import ru.romanow.OperationType.PUT
+import ru.romanow.LRUCacheTest.OperationType.GET
+import ru.romanow.LRUCacheTest.OperationType.PUT
 import java.util.stream.Stream
 
 class LRUCacheTest {
@@ -52,15 +52,15 @@ class LRUCacheTest {
                 )
             )
     }
-}
 
-data class Operation(
-    val type: OperationType,
-    val key: Int,
-    val value: Int,
-)
+    data class Operation(
+        val type: OperationType,
+        val key: Int,
+        val value: Int,
+    )
 
-enum class OperationType {
-    PUT,
-    GET
+    enum class OperationType {
+        PUT,
+        GET
+    }
 }

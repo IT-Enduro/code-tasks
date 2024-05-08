@@ -34,3 +34,11 @@
 9. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) – [solution](src/main/kotlin/ru/romanow/ReverseWordsInAString.kt), [test](src/test/kotlin/ru/romanow/ReverseWordsInAStringTest.kt), **TODO**
 10. [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) – [solution](src/main/kotlin/ru/romanow/FlattenBinaryTreeToLinkedList.kt), [test](src/test/kotlin/ru/romanow/FlattenBinaryTreeToLinkedListTest.kt), **TODO**
 11. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) – [solution](src/main/kotlin/ru/romanow/EvaluateReversePolishNotation.kt), [test](src/test/kotlin/ru/romanow/EvaluateReversePolishNotationTest.kt), **TODO**
+12. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) – [solution](src/main/kotlin/ru/romanow/LongestConsecutiveSequence.kt), [test](src/test/kotlin/ru/romanow/LongestConsecutiveSequenceTest.kt), **TODO**
+13. [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) – [solution](src/main/kotlin/ru/romanow/BasicCalculator.kt), [test](src/test/kotlin/ru/romanow/BasicCalculatorTest.kt), **TODO**
+14. [Basic Calculator II](https://leetcode.com/problems/implement-trie-prefix-tree/) – [solution](src/main/kotlin/ru/romanow/PrefixTree.kt), [test](src/test/kotlin/ru/romanow/PrefixTreeTest.kt)
+15. [Game of Life](https://leetcode.com/problems/game-of-life/) – [solution](src/main/kotlin/ru/romanow/GameOfLife.kt), [test](src/test/kotlin/ru/romanow/GameOfLifeTest.kt)
+
+## Hard level
+
+1. [Basic Calculator](https://leetcode.com/problems/basic-calculator/) – [solution](src/main/kotlin/ru/romanow/BasicCalculatorWithBrackets.kt), [test](src/test/kotlin/ru/romanow/BasicCalculatorWithBracketsTest.kt)
