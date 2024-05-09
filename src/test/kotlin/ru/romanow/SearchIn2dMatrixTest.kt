@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -15,7 +15,7 @@ class SearchIn2dMatrixTest {
     @ParameterizedTest(name = "#{index} – is matrix contains {1} – {2}")
     fun searchMatrix(matrix: Array<IntArray>, target: Int, result: Boolean) {
         val obj = SearchIn2dMatrix()
-        Assertions.assertThat(obj.searchMatrix(matrix, target)).isEqualTo(result)
+        assertThat(obj.searchMatrix(matrix, target)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

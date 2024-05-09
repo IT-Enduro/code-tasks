@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class ValidSudokuTest {
     @ParameterizedTest(name = "#{index} – expected result {1}")
     fun isValidSudoku(board: Array<CharArray>, result: Boolean) {
         val obj = ValidSudoku()
-        Assertions.assertThat(obj.isValidSudoku(board)).isEqualTo(result)
+        assertThat(obj.isValidSudoku(board)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

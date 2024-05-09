@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class IntegerToRomanTest {
     @ParameterizedTest(name = "#{index} – Integer {0} is {1}")
     fun productExceptSelf(num: Int, result: String) {
         val obj = IntegerToRoman()
-        Assertions.assertThat(obj.intToRoman(num)).isEqualTo(result)
+        assertThat(obj.intToRoman(num)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

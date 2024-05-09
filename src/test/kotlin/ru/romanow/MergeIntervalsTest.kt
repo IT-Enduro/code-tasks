@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -15,7 +15,7 @@ class MergeIntervalsTest {
     @ParameterizedTest(name = "#{index} – Merged intervals of {0} – {1}")
     fun summaryRanges(intervals: Array<IntArray>, result: Array<IntArray>) {
         val obj = MergeIntervals()
-        Assertions.assertThat(obj.merge(intervals)).isEqualTo(result)
+        assertThat(obj.merge(intervals)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

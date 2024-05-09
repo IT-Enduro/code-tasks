@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class SummaryRangesTest {
     @ParameterizedTest(name = "#{index} – Summary {0} – {1}")
     fun summaryRanges(nums: IntArray, result: List<String>) {
         val obj = SummaryRanges()
-        Assertions.assertThat(obj.summaryRanges(nums)).isEqualTo(result)
+        assertThat(obj.summaryRanges(nums)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

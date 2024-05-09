@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class RomanToIntegerTest {
     @ParameterizedTest(name = "#{index} – Roman {0} is {1}")
     fun romanToInt(s: String, result: Int) {
         val obj = RomanToInteger()
-        Assertions.assertThat(obj.romanToInt(s)).isEqualTo(result)
+        assertThat(obj.romanToInt(s)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

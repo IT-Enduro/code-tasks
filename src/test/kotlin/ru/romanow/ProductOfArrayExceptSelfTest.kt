@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class ProductOfArrayExceptSelfTest {
     @ParameterizedTest(name = "#{index} – array {0} product except self {1}")
     fun productExceptSelf(nums: IntArray, result: IntArray) {
         val obj = ProductOfArrayExceptSelf()
-        Assertions.assertThat(obj.productExceptSelf(nums)).isEqualTo(result)
+        assertThat(obj.productExceptSelf(nums)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

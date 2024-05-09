@@ -20,6 +20,10 @@
 13. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) – [solution](src/main/kotlin/ru/romanow/ValidParentheses.kt), [test](src/test/kotlin/ru/romanow/ValidParenthesesTest.kt), **TODO**
 14. [Missing Number](https://leetcode.com/problems/missing-number/) – [solution](src/main/kotlin/ru/romanow/MissingNumber.kt), [test](src/test/kotlin/ru/romanow/MissingNumberTest.kt)
 15. [Power of Three](https://leetcode.com/problems/power-of-three/) – [solution](src/main/kotlin/ru/romanow/PowerOfThree.kt), [test](src/test/kotlin/ru/romanow/PowerOfThreeTest.kt)
+16. [Majority Element](https://leetcode.com/problems/majority-element/) – [solution](src/main/kotlin/ru/romanow/MajorityElement.kt), [test](src/test/kotlin/ru/romanow/MajorityElementTest.kt)
+17. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) – [solution](src/main/kotlin/ru/romanow/ValidAnagram.kt), [test](src/test/kotlin/ru/romanow/ValidAnagramTest.kt)
+18. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) – [solution](src/main/kotlin/ru/romanow/ValidAnagram.kt), [test](src/test/kotlin/ru/romanow/ValidAnagramTest.kt)
+19. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) – [solution](src/main/kotlin/ru/romanow/RemoveDuplicatesFromSortedArray.kt), [test](src/test/kotlin/ru/romanow/RemoveDuplicatesFromSortedArrayTest.kt)
 
 ## Medium level
 
@@ -38,6 +42,7 @@
 13. [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) – [solution](src/main/kotlin/ru/romanow/BasicCalculator.kt), [test](src/test/kotlin/ru/romanow/BasicCalculatorTest.kt), **TODO**
 14. [Basic Calculator II](https://leetcode.com/problems/implement-trie-prefix-tree/) – [solution](src/main/kotlin/ru/romanow/PrefixTree.kt), [test](src/test/kotlin/ru/romanow/PrefixTreeTest.kt)
 15. [Game of Life](https://leetcode.com/problems/game-of-life/) – [solution](src/main/kotlin/ru/romanow/GameOfLife.kt), [test](src/test/kotlin/ru/romanow/GameOfLifeTest.kt)
+16. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) – [solution](src/main/kotlin/ru/romanow/DeleteNodeInALinkedList.kt), [test](src/test/kotlin/ru/romanow/DeleteNodeInALinkedListTest.kt)
 
 ## Hard level
 

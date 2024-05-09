@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class TwoSumTest {
     @ParameterizedTest(name = "#{index} – Find two numbers {0} for sum {1}")
     fun twoSum(nums: IntArray, target: Int, result: IntArray) {
         val obj = TwoSum()
-        Assertions.assertThat(obj.twoSum(nums, target)).isEqualTo(result)
+        assertThat(obj.twoSum(nums, target)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {

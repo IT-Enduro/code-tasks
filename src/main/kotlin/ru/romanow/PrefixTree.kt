@@ -11,7 +11,7 @@ package ru.romanow
  * * `fun startsWith(prefix: String): Boolean` – возвращает `true`, если в дереве есть слово, начинающееся
  *   с этого префикса, `false` иначе.
  *
- * [https://leetcode.com/problems/implement-trie-prefix-tree/](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
+ * [https://leetcode.com/problems/implement-trie-prefix-tree/](https://leetcode.com/problems/implement-trie-prefix-tree/)
  */
 class PrefixTree {
     fun insert(word: String) {

@@ -8,21 +8,20 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class ReverseWordsInAStringTest {
+class ValidAnagramTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Reverse {0} words order is {1}")
-    fun reverseWords(s: String, result: String) {
-        val obj = ReverseWordsInAString()
-        assertThat(obj.reverseWords(s)).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – {0} is anagram for {1} – {2}")
+    fun isAnagram(s: String, t: String, result: Boolean) {
+        val obj = ValidAnagram()
+        assertThat(obj.isAnagram(s, t)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
-                Arguments.of("the sky is blue", "blue is sky the"),
-                Arguments.of("  hello world  ", "world hello"),
-                Arguments.of("a good   example", "example good a")
+                Arguments.of("anagram", "nagaram", true),
+                Arguments.of("rat", "car", false)
             )
     }
 }

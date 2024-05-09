@@ -1,6 +1,6 @@
 package ru.romanow
 
-import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -14,7 +14,7 @@ class PlusOneTest {
     @ParameterizedTest(name = "#{index} – Plus 1 to {0}")
     fun plusOne(digits: IntArray, result: IntArray) {
         val obj = PlusOne()
-        Assertions.assertThat(obj.plusOne(digits)).isEqualTo(result)
+        assertThat(obj.plusOne(digits)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
