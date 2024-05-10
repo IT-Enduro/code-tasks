@@ -13,6 +13,12 @@ package ru.romanow
  */
 class RemoveDuplicatesFromSortedArray {
     fun removeDuplicates(nums: IntArray): Int {
-        return 0
+        var counter = 1
+        for (i in 1 until nums.size) {
+            if (nums[i - 1] != nums[i]) {
+                nums[counter++] = nums[i]
+            }
+        }
+        return counter
     }
 }

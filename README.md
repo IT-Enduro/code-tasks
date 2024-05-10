@@ -22,7 +22,7 @@
 15. [Power of Three](https://leetcode.com/problems/power-of-three/) – [solution](src/main/kotlin/ru/romanow/PowerOfThree.kt), [test](src/test/kotlin/ru/romanow/PowerOfThreeTest.kt)
 16. [Majority Element](https://leetcode.com/problems/majority-element/) – [solution](src/main/kotlin/ru/romanow/MajorityElement.kt), [test](src/test/kotlin/ru/romanow/MajorityElementTest.kt)
 17. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) – [solution](src/main/kotlin/ru/romanow/ValidAnagram.kt), [test](src/test/kotlin/ru/romanow/ValidAnagramTest.kt)
-18. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) – [solution](src/main/kotlin/ru/romanow/ValidAnagram.kt), [test](src/test/kotlin/ru/romanow/ValidAnagramTest.kt)
+18. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) – [solution](src/main/kotlin/ru/romanow/IntersectionOfTwoArrays.kt), [test](src/test/kotlin/ru/romanow/IntersectionOfTwoArraysTest.kt)
 19. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) – [solution](src/main/kotlin/ru/romanow/RemoveDuplicatesFromSortedArray.kt), [test](src/test/kotlin/ru/romanow/RemoveDuplicatesFromSortedArrayTest.kt)
 
 ## Medium level

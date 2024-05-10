@@ -10,6 +10,16 @@ package ru.romanow
  */
 class ValidAnagram {
     fun isAnagram(s: String, t: String): Boolean {
-        return false
+        if (s.length != t.length) {
+            return false
+        }
+
+        val letter = IntArray(26)
+        val a =  'a'.code
+        for (i in s.indices) {
+            letter[s[i].code - a]++
+            letter[t[i].code - a]--
+        }
+        return !letter.any { it != 0 }
     }
 }
