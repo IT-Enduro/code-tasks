@@ -15,7 +15,7 @@ class ValidAnagram {
         }
 
         val letter = IntArray(26)
-        val a =  'a'.code
+        val a = 'a'.code
         for (i in s.indices) {
             letter[s[i].code - a]++
             letter[t[i].code - a]--

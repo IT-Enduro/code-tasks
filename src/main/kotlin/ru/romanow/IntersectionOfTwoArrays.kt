@@ -9,6 +9,23 @@ package ru.romanow
  */
 class IntersectionOfTwoArrays {
     fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
-        return intArrayOf()
+        val map = mutableMapOf<Int, Int>()
+        val result = mutableListOf<Int>()
+        nums1.forEach {
+            val count = map[it]
+            map[it] = if (count == null) 0 else count + 1
+        }
+
+        for (num in nums2) {
+            val count = map[num]
+            if (count != null) {
+                map[num] = count - 1
+                if (count >= 0) {
+                    result.add(num)
+                }
+            }
+        }
+
+        return result.toIntArray()
     }
 }

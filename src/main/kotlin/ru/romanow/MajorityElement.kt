@@ -9,6 +9,16 @@ package ru.romanow
  */
 class MajorityElement {
     fun majorityElement(nums: IntArray): Int {
-        return 0
+        var candidate = 0
+        var counter = 0
+        for (num in nums) {
+            if (counter == 0) {
+                candidate = num
+                counter++
+            } else {
+                counter = if (candidate == num) counter + 1 else counter - 1
+            }
+        }
+        return candidate
     }
 }

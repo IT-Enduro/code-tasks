@@ -21,7 +21,7 @@ class IntersectionOfTwoArraysTest {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
                 Arguments.of(intArrayOf(1, 2, 2, 1), intArrayOf(2, 2), intArrayOf(2, 2)),
-                Arguments.of(intArrayOf(4, 9, 5), intArrayOf(9, 4, 9, 8, 4), intArrayOf(4, 9))
+                Arguments.of(intArrayOf(4, 9, 5), intArrayOf(9, 4, 9, 8, 4), intArrayOf(9, 4))
             )
     }
 }
