@@ -43,6 +43,11 @@
 14. [Basic Calculator II](https://leetcode.com/problems/implement-trie-prefix-tree/) – [solution](src/main/kotlin/ru/romanow/PrefixTree.kt), [test](src/test/kotlin/ru/romanow/PrefixTreeTest.kt)
 15. [Game of Life](https://leetcode.com/problems/game-of-life/) – [solution](src/main/kotlin/ru/romanow/GameOfLife.kt), [test](src/test/kotlin/ru/romanow/GameOfLifeTest.kt)
 16. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) – [solution](src/main/kotlin/ru/romanow/DeleteNodeInALinkedList.kt), [test](src/test/kotlin/ru/romanow/DeleteNodeInALinkedListTest.kt)
+17. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) – [solution](src/main/kotlin/ru/romanow/LongestCommonSubsequence.kt), [test](src/test/kotlin/ru/romanow/LongestCommonSubsequenceTest.kt)
+18. [Delete Node in a Binary Search Tree](https://leetcode.com/problems/delete-node-in-a-bst/) – [solution](src/main/kotlin/ru/romanow/DeleteNodeInABalancedSearchTree.kt), [test](src/test/kotlin/ru/romanow/DeleteNodeInABalancedSearchTreeTest.kt)
+19. [Decode String](https://leetcode.com/problems/decode-string/) – [solution](src/main/kotlin/ru/romanow/DecodeString.kt), [test](src/test/kotlin/ru/romanow/DecodeStringTest.kt)
+20. [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/) – [solution](src/main/kotlin/ru/romanow/DetermineIfTwoStringsAreClose.kt), [test](src/test/kotlin/ru/romanow/DetermineIfTwoStringsAreCloseTest.kt)
+21. [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) – [solution](src/main/kotlin/ru/romanow/RemovingStarsFromAString.kt), [test](src/test/kotlin/ru/romanow/RemovingStarsFromAStringTest.kt)
 
 ## Hard level
 

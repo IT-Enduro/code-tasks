@@ -10,28 +10,24 @@ import ru.romanow.models.buildListFromTree
 import ru.romanow.models.buildTreeFromList
 import java.util.stream.Stream
 
-class FlattenBinaryTreeToLinkedListTest {
+class DeleteNodeInABalancedSearchTreeTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Binary tree {0} flatten into {1}")
-    fun flatten(items: List<Int?>, result: List<Int>) {
-        val root = buildTreeFromList(items, 0)
-
-        val obj = FlattenBinaryTreeToLinkedList()
-        obj.flatten(root)
-        val list = buildListFromTree(root)
-        assertThat(list).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – Tree {0} after removing key {1} is {2}")
+    fun deleteNode(values: List<Int?>, key: Int, expectedResult: List<Int?>) {
+        val obj = DeleteNodeInABalancedSearchTree()
+        val root = buildTreeFromList(values, 0)
+        val result = buildListFromTree(obj.deleteNode(root, key))
+        assertThat(result).isEqualTo(expectedResult)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
-                Arguments.of(
-                    listOf(1, 2, 5, 3, 4, null, 6),
-                    listOf(1, null, 2, null, 3, null, 4, null, 5, null, 6)
-                ),
-                Arguments.of(listOf<Int?>(), listOf<Int?>()),
-                Arguments.of(listOf<Int?>(0), listOf<Int?>(0))
+                Arguments.of(listOf(5, 3, 6, 2, 4, null, 7), 3, listOf(5, 4, 6, 2, null, null, 7)),
+                Arguments.of(listOf(5, 3, 6, 2, 4, null, 7), 0, listOf(5, 3, 6, 2, 4, null, 7)),
+                Arguments.of(listOf<Int?>(), 0, listOf<Int?>())
+
             )
     }
 }
