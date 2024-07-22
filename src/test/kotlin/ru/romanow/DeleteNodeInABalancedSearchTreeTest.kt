@@ -27,7 +27,6 @@ class DeleteNodeInABalancedSearchTreeTest {
                 Arguments.of(listOf(5, 3, 6, 2, 4, null, 7), 3, listOf(5, 4, 6, 2, null, null, 7)),
                 Arguments.of(listOf(5, 3, 6, 2, 4, null, 7), 0, listOf(5, 3, 6, 2, 4, null, 7)),
                 Arguments.of(listOf<Int?>(), 0, listOf<Int?>())
-
             )
     }
 }

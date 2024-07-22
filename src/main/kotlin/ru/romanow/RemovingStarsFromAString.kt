@@ -9,6 +9,14 @@ package ru.romanow
  */
 class RemovingStarsFromAString {
     fun removeStars(s: String): String {
-        return s
+        val result = StringBuilder()
+        for (chr in s) {
+            if (chr == '*' && result.isNotEmpty()) {
+                result.setLength(result.length - 1)
+            } else {
+                result.append(chr)
+            }
+        }
+        return result.toString()
     }
 }

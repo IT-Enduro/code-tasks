@@ -1,5 +1,7 @@
 package ru.romanow
 
+import java.util.Stack
+
 /**
  * Дана закодированная строка, вернуть декодированную строку.
  *
@@ -16,6 +18,30 @@ package ru.romanow
  */
 class DecodeString {
     fun decodeString(s: String): String {
-        return s
+        var result = StringBuilder()
+        val counts = Stack<Int>()
+        val strings = Stack<StringBuilder>()
+
+        var k = 0
+        for (chr in s) {
+            if (chr.isDigit()) {
+                k = (10 * k) + chr.digitToInt()
+            } else if (chr == '[') {
+                counts.push(k)
+                k = 0
+                strings.push(result)
+                result = StringBuilder()
+            } else if (chr == ']') {
+                val n = counts.pop()
+                val temp = result
+                result = strings.pop()
+                for (i in 0 until n) {
+                    result.append(temp)
+                }
+            } else {
+                result.append(chr)
+            }
+        }
+        return result.toString()
     }
 }

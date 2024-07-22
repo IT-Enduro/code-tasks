@@ -21,7 +21,8 @@ class RemovingStarsFromAStringTest {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
                 Arguments.of("leet**cod*e", "lecoe"),
-                Arguments.of("erase*****", "")
+                Arguments.of("erase*****", ""),
+                Arguments.of("abb*cdfg*****x*", "a")
             )
     }
 }
