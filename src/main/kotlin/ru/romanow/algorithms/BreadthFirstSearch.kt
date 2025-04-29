@@ -15,6 +15,7 @@ class BreadthFirstSearch {
 
         while (queue.isNotEmpty()) {
             val node = queue.poll()
+            // print("${node.value} ")
             result.add(node.value)
             node.left?.let { queue.add(it) }
             node.right?.let { queue.add(it) }

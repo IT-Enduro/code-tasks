@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import ru.romanow.models.buildTreeFromList
-import ru.romanow.models.printTree
 import java.util.stream.Stream
 
 class InOrderDeepFirstSearchTest {
@@ -16,7 +15,7 @@ class InOrderDeepFirstSearchTest {
     @ParameterizedTest(name = "#{index} – In-order dfs {0} is {1}")
     fun flatten(items: List<Int?>, result: List<Int>) {
         val root = buildTreeFromList(items)
-        printTree(root)
+        // printTree(root)
 
         val obj = InOrderDeepFirstSearch()
         assertThat(obj.traverse(root)).isEqualTo(result)

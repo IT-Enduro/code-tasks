@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import ru.romanow.models.buildTreeFromList
-import ru.romanow.models.printTree
 import java.util.stream.Stream
 
 class BinarySearchTreeTest {
@@ -16,7 +15,7 @@ class BinarySearchTreeTest {
     @ParameterizedTest(name = "#{index} – Search {1} in tree {0}")
     fun flatten(items: List<Int?>, target: Int, result: Int?) {
         val root = buildTreeFromList(items)
-        printTree(root)
+        // printTree(root)
 
         val obj = BinarySearchTree()
         assertThat(obj.find(root, target)?.value).isEqualTo(result)
