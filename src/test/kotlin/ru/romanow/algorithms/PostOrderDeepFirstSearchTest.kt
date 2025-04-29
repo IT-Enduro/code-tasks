@@ -24,6 +24,6 @@ class PostOrderDeepFirstSearchTest {
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
-            Stream.of(Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), listOf(20, 12, 15, 7, 3, 5, 10)))
+            Stream.of(Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), listOf(3, 7, 5, 12, 20, 15, 10)))
     }
 }

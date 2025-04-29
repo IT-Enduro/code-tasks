@@ -3,12 +3,19 @@ package ru.romanow.algorithms
 import ru.romanow.models.TreeNode
 
 class PreOrderDeepFirstSearch {
-    fun traverse(node: TreeNode?): List<Int> {
+    fun traverse(root: TreeNode?): List<Int> {
+        val result = mutableListOf<Int>()
+        traverse(root, result)
+        return result
+    }
+
+    private fun traverse(node: TreeNode?, accumulator: MutableList<Int>) {
         if (node == null) {
-            return emptyList()
+            return
         }
-        return listOf(node.value) +
-            traverse(node.left) +
-            traverse(node.right)
+        // print("${node.value} ")
+        accumulator.add(node.value)
+        traverse(node.left, accumulator)
+        traverse(node.right, accumulator)
     }
 }
