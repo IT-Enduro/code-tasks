@@ -15,7 +15,7 @@ class FlattenBinaryTreeToLinkedListTest {
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Binary tree {0} flatten into {1}")
     fun flatten(items: List<Int?>, result: List<Int>) {
-        val root = buildTreeFromList(items, 0)
+        val root = buildTreeFromList(items)
 
         val obj = FlattenBinaryTreeToLinkedList()
         obj.flatten(root)

@@ -1,25 +1,10 @@
 package ru.romanow.models
 
-import java.util.LinkedList
+import java.util.*
 
-class TreeNode {
-    var value: Int? = null
+data class TreeNode(var value: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
-
-    constructor(value: Int?) {
-        this.value = value
-    }
-
-    constructor(value: Int?, left: TreeNode?, right: TreeNode?) {
-        this.value = value
-        this.left = left
-        this.right = right
-    }
-
-    override fun toString(): String {
-        return "TreeNode(value=$value, left=${left?.value}, right=${right?.value})"
-    }
 }
 
 fun buildListFromTree(root: TreeNode?): List<Int?> {
@@ -41,10 +26,10 @@ fun buildListFromTree(root: TreeNode?): List<Int?> {
     return list
 }
 
-fun buildTreeFromList(values: List<Int?>, index: Int): TreeNode? {
+fun buildTreeFromList(values: List<Int?>, index: Int = 0): TreeNode? {
     var node: TreeNode? = null
     if (index < values.size && values[index] != null) {
-        node = TreeNode(value = values[index])
+        node = TreeNode(value = values[index]!!)
         node.left = buildTreeFromList(values, 2 * index + 1)
         node.right = buildTreeFromList(values, 2 * index + 2)
     }

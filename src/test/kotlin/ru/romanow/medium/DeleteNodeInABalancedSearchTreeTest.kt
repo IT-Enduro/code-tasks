@@ -16,7 +16,7 @@ class DeleteNodeInABalancedSearchTreeTest {
     @ParameterizedTest(name = "#{index} – Tree {0} after removing key {1} is {2}")
     fun deleteNode(values: List<Int?>, key: Int, expectedResult: List<Int?>) {
         val obj = DeleteNodeInABalancedSearchTree()
-        val root = buildTreeFromList(values, 0)
+        val root = buildTreeFromList(values)
         val result = buildListFromTree(obj.deleteNode(root, key))
         assertThat(result).isEqualTo(expectedResult)
     }
