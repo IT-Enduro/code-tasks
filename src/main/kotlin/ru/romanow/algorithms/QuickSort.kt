@@ -10,15 +10,18 @@ class QuickSort {
     }
 
     private fun partition(arr: IntArray, low: Int, high: Int): Int {
-        val pivot = arr[high]
+        val pivot = arr[high] // в качестве опрного элемента берем последний
         var i = low - 1
 
+        // если arr[j] <= pivot, увеличиваем i и меняем местами arr[i] и arr[j]
+        //  таким образом, все элементы <= pivot собираются слева
         for (j in low until high) {
             if (arr[j] <= pivot) {
                 i++
                 arr.swap(i, j)
             }
         }
+        // в конце arr[i + 1] и arr[high] меняются местами, чтобы поставить pivot на правильную позицию
         arr.swap(i + 1, high)
         return i + 1
     }
