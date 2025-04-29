@@ -1,10 +1,19 @@
 package ru.romanow.models
 
-import java.util.*
+import java.util.LinkedList
+import kotlin.collections.ArrayList
 
 data class TreeNode(var value: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
+}
+
+fun printTree(node: TreeNode?, level: Int = 0) {
+    if (node == null) return
+    print("  ".repeat(level))
+    println("├─ ${node.value}")
+    printTree(node.left, level + 1)
+    printTree(node.right, level + 1)
 }
 
 fun buildListFromTree(root: TreeNode?): List<Int?> {

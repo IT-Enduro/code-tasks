@@ -10,23 +10,20 @@ import ru.romanow.models.buildTreeFromList
 import ru.romanow.models.printTree
 import java.util.stream.Stream
 
-class BinarySearchTreeTest {
+class InOrderDeepFirstSearchTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Search {1} in tree {0}")
-    fun flatten(items: List<Int?>, target: Int, result: Int?) {
+    @ParameterizedTest(name = "#{index} – In-order dfs {0} is {1}")
+    fun flatten(items: List<Int?>, result: List<Int>) {
         val root = buildTreeFromList(items)
         printTree(root)
 
-        val obj = BinarySearchTree()
-        assertThat(obj.find(root, target)?.value).isEqualTo(result)
+        val obj = InOrderDeepFirstSearch()
+        assertThat(obj.traverse(root)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
-            Stream.of(
-                Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), 20, 20),
-                Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), 0, null)
-            )
+            Stream.of(Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), listOf(3, 5, 7, 10, 12, 15, 20)))
     }
 }

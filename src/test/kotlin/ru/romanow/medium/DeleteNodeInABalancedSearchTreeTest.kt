@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import ru.romanow.models.buildListFromTree
 import ru.romanow.models.buildTreeFromList
+import ru.romanow.models.printTree
 import java.util.stream.Stream
 
 class DeleteNodeInABalancedSearchTreeTest {
@@ -15,8 +16,10 @@ class DeleteNodeInABalancedSearchTreeTest {
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Tree {0} after removing key {1} is {2}")
     fun deleteNode(values: List<Int?>, key: Int, expectedResult: List<Int?>) {
-        val obj = DeleteNodeInABalancedSearchTree()
         val root = buildTreeFromList(values)
+        printTree(root)
+
+        val obj = DeleteNodeInABalancedSearchTree()
         val result = buildListFromTree(obj.deleteNode(root, key))
         assertThat(result).isEqualTo(expectedResult)
     }

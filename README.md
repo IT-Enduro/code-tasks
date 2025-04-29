@@ -58,9 +58,14 @@
 ## Algorithms
 
 1. Bubble Sort – [solution](src/main/kotlin/ru/romanow/algorithms/BubbleSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/BubbleSortTest.kt)
-2. Selection Sort – [solution](src/main/kotlin/ru/romanow/algorithms/InsertionSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/InsertionSortTest.kt)
+2. Insertion Sort – [solution](src/main/kotlin/ru/romanow/algorithms/InsertionSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/InsertionSortTest.kt)
 3. Selection Sort – [solution](src/main/kotlin/ru/romanow/algorithms/SelectionSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/SelectionSortTest.kt)
 4. Quick Sort – [solution](src/main/kotlin/ru/romanow/algorithms/QuickSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/QuickSortTest.kt)
 5. Merge Sort – [solution](src/main/kotlin/ru/romanow/algorithms/MergeSort.kt), [test](src/test/kotlin/ru/romanow/algorithms/MergeSortTest.kt)
+6. Binary Search Tree – [solution](src/main/kotlin/ru/romanow/algorithms/BinarySearchTree.kt), [test](src/test/kotlin/ru/romanow/algorithms/BinarySearchTreeTest.kt)
+7. Pre-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/PreOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/PreOrderDeepFirstSearchTest.kt)
+8. In-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/InOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/InOrderDeepFirstSearchTest.kt)
+9. Post-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearchTest.kt)
+10. Breadth First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/BreadthFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/BreadthFirstSearchTest.kt)
 
 [//]: # (@formatter:on)
