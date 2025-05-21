@@ -6,17 +6,18 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
-import ru.romanow.models.buildTreeFromList
 import java.util.stream.Stream
 
 class BinarySearchTreeTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Search {1} in tree {0}")
-    fun flatten(items: List<Int>, target: Int, result: Int?) {
-        val root = buildTreeFromList(items)
+    fun flatten(items: List<Int>, key: Int, result: Int?) {
         val obj = BinarySearchTree()
-        assertThat(obj.find(root, target)?.value).isEqualTo(result)
+        items.forEach { obj.put(it) }
+        assertThat(obj.get(key)).isEqualTo(result)
+        obj.remove(key)
+        assertThat(obj.get(key)).isNull()
     }
 
     internal class ValueProvider : ArgumentsProvider {
