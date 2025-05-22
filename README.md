@@ -46,10 +46,9 @@
 15. [Game of Life](https://leetcode.com/problems/game-of-life/) – [solution](src/main/kotlin/ru/romanow/medium/GameOfLife.kt), [test](src/test/kotlin/ru/romanow/medium/GameOfLifeTest.kt)
 16. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) – [solution](src/main/kotlin/ru/romanow/medium/DeleteNodeInALinkedList.kt), [test](src/test/kotlin/ru/romanow/medium/DeleteNodeInALinkedListTest.kt)
 17. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) – [solution](src/main/kotlin/ru/romanow/medium/LongestCommonSubsequence.kt), [test](src/test/kotlin/ru/romanow/medium/LongestCommonSubsequenceTest.kt)
-18. [Delete Node in a Binary Search Tree](https://leetcode.com/problems/delete-node-in-a-bst/) – [solution](src/main/kotlin/ru/romanow/medium/DeleteNodeInABalancedSearchTree.kt), [test](src/test/kotlin/ru/romanow/medium/DeleteNodeInABalancedSearchTreeTest.kt)
-19. [Decode String](https://leetcode.com/problems/decode-string/) – [solution](src/main/kotlin/ru/romanow/medium/DecodeString.kt), [test](src/test/kotlin/ru/romanow/medium/DecodeStringTest.kt)
-20. [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/) – [solution](src/main/kotlin/ru/romanow/medium/DetermineIfTwoStringsAreClose.kt), [test](src/test/kotlin/ru/romanow/medium/DetermineIfTwoStringsAreCloseTest.kt)
-21. [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) – [solution](src/main/kotlin/ru/romanow/medium/RemovingStarsFromAString.kt), [test](src/test/kotlin/ru/romanow/medium/RemovingStarsFromAStringTest.kt)
+18. [Decode String](https://leetcode.com/problems/decode-string/) – [solution](src/main/kotlin/ru/romanow/medium/DecodeString.kt), [test](src/test/kotlin/ru/romanow/medium/DecodeStringTest.kt)
+19. [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/) – [solution](src/main/kotlin/ru/romanow/medium/DetermineIfTwoStringsAreClose.kt), [test](src/test/kotlin/ru/romanow/medium/DetermineIfTwoStringsAreCloseTest.kt)
+20. [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) – [solution](src/main/kotlin/ru/romanow/medium/RemovingStarsFromAString.kt), [test](src/test/kotlin/ru/romanow/medium/RemovingStarsFromAStringTest.kt)
 
 ## Hard level
 

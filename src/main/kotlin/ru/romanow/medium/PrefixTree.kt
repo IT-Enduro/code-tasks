@@ -14,14 +14,34 @@ package ru.romanow.medium
  * [https://leetcode.com/problems/implement-trie-prefix-tree/](https://leetcode.com/problems/implement-trie-prefix-tree/)
  */
 class PrefixTree {
+    private val root = TrieNode()
+
     fun insert(word: String) {
+        var node = root
+        for (chr in word) {
+            node = node.children.getOrPut(chr) { TrieNode() }
+        }
+        node.isEndOfWord = true
     }
 
     fun search(word: String): Boolean {
-        return false
+        return find(word)?.isEndOfWord == true
     }
 
     fun startsWith(prefix: String): Boolean {
-        return false
+        return find(prefix) != null
     }
+
+    private fun find(word: String): TrieNode? {
+        var node = root
+        for (chr in word) {
+            node = node.children[chr] ?: return null
+        }
+        return node
+    }
+
+    private data class TrieNode(
+        val children: MutableMap<Char, TrieNode> = mutableMapOf(),
+        var isEndOfWord: Boolean = false,
+    )
 }

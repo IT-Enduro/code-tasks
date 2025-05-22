@@ -8,11 +8,12 @@ class RedBlackTree {
     fun get(key: Int): Int? {
         var current = root
         while (current != null) {
-            current = when {
-                key < current.key -> current.left
-                key > current.key -> current.right
-                else -> return current.value
-            }
+            current =
+                when {
+                    key < current.key -> current.left
+                    key > current.key -> current.right
+                    else -> return current.value
+                }
         }
         return null
     }
@@ -24,5 +25,4 @@ class RedBlackTree {
         override var left: TreeNode?,
         override var right: TreeNode?
     ) : TNode<TreeNode>
-
 }

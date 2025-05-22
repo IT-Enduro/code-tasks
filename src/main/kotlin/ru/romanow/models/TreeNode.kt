@@ -1,6 +1,7 @@
 package ru.romanow.models
 
-import java.util.*
+import java.util.LinkedList
+import kotlin.collections.ArrayList
 
 interface TNode<T : TNode<T>> {
     var key: Int
