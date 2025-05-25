@@ -20,6 +20,7 @@ class BasicCalculatorWithBracketsTest {
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
             Stream.of(
+                Arguments.of("1-(1+2)", -2),
                 Arguments.of("1 + 1", 2),
                 Arguments.of(" 2-1 + 2 ", 3),
                 Arguments.of("(1+(4+5+2)-3)+(6+8)", 23)
