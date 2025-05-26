@@ -13,7 +13,7 @@ class BreadthFirstSearchTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Bfs {0} is {1}")
-    fun flatten(items: List<Int?>, result: List<Int>) {
+    fun test(items: List<Int?>, result: List<Int>) {
         val root = buildTreeFromList(items)
         // printTree(root)
 

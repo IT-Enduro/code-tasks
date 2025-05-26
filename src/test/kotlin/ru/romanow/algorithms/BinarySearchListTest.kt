@@ -12,7 +12,7 @@ class BinarySearchListTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Search {1} in tree {0}")
-    fun flatten(list: List<Int>, target: Int, result: Int?) {
+    fun test(list: List<Int>, target: Int, result: Int?) {
         val obj = BinarySearchList()
         assertThat(obj.find(list, target)).isEqualTo(result)
     }

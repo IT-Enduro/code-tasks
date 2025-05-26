@@ -13,7 +13,7 @@ class PreOrderDeepFirstSearchTest {
 
     @ArgumentsSource(ValueProvider::class)
     @ParameterizedTest(name = "#{index} – Pre-order dfs {0} is {1}")
-    fun flatten(items: List<Int?>, result: List<Int>) {
+    fun test(items: List<Int?>, result: List<Int>) {
         val root = buildTreeFromList(items)
         // printTree(root)
 
