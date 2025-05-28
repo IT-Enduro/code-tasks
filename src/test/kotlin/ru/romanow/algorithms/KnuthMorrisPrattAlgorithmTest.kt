@@ -4,25 +4,22 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.Arguments.of
 import org.junit.jupiter.params.provider.ArgumentsProvider
 import org.junit.jupiter.params.provider.ArgumentsSource
 import java.util.stream.Stream
 
-class RedBlackTreeTest {
+class KnuthMorrisPrattAlgorithmTest {
 
     @ArgumentsSource(ValueProvider::class)
-    @ParameterizedTest(name = "#{index} – Search {1} in tree {0}")
-    fun test(items: List<Int>, key: Int, result: Int?) {
-        val obj = RedBlackTree()
-        items.forEach { obj.put(it) }
-        assertThat(obj.get(key)).isEqualTo(result)
+    @ParameterizedTest(name = "#{index} – Occurrence {1} index in a string {0} is {2}")
+    fun strStr(haystack: String, needle: String, result: Int) {
+        val obj = KnuthMorrisPrattAlgorithm()
+        assertThat(obj.strStr(haystack, needle)).isEqualTo(result)
     }
 
     internal class ValueProvider : ArgumentsProvider {
         override fun provideArguments(context: ExtensionContext): Stream<Arguments> =
-            Stream.of(
-                Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), 20, 20),
-                Arguments.of(listOf(10, 5, 15, 3, 7, 12, 20), 0, null)
-            )
+            Stream.of(of("sadbutsad", "sad", 0), of("leetcode", "leeto", -1), of("a", "a", 0), of("a", "asd", -1))
     }
 }

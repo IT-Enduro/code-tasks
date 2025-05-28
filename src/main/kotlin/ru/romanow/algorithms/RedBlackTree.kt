@@ -24,7 +24,6 @@ class RedBlackTree {
     }
 
     fun remove(key: Int) {
-
     }
 
     private fun insert(n: TreeNode?, key: Int, value: Int): TreeNode {

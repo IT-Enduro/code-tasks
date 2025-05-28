@@ -7,9 +7,9 @@
 
 ## Easy level
 
-1. [First bad version](https://leetcode.com/problems/first-bad-version/) – [solution](src/main/kotlin/ru/romanow/easy/FirstBadVersion.kt), [test](src/test/kotlin/ru/romanow/FirstBadVersionTest.kt)
+1. [First bad version](https://leetcode.com/problems/first-bad-version/) – [solution](src/main/kotlin/ru/romanow/easy/FirstBadVersion.kt), [test](src/test/kotlin/ru/romanow/easy/FirstBadVersionTest.kt)
 2. [Merge sorted array](https://leetcode.com/problems/merge-sorted-array/) – [solution](src/main/kotlin/ru/romanow/easy/MergeSortedArrays.kt), [test](src/test/kotlin/ru/romanow/easy/MergeSortedArraysTest.kt), разбор на [YouTube](https://youtube.com/watch?v=qEHYFV0f6FQ)
-3. [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) – [solution](src/main/kotlin/ru/romanow/FirstOccurrenceInAString.kt), [test](src/test/kotlin/ru/romanow/easy/FirstOccurrenceInAStringTest.kt), **TODO**
+3. [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) – [solution](src/main/kotlin/ru/romanow/easy/FirstOccurrenceInAString.kt), [test](src/test/kotlin/ru/romanow/easy/FirstOccurrenceInAStringTest.kt), **TODO**
 4. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) – [solution](src/main/kotlin/ru/romanow/easy/LongestCommonPrefix.kt), [test](src/test/kotlin/ru/romanow/easy/LongestCommonPrefixTest.kt)
 5. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) – [solution](src/main/kotlin/ru/romanow/easy/ValidPalindrome.kt), [test](src/test/kotlin/ru/romanow/easy/ValidPalindromeTest.kt), **TODO**
 6. [Two Sum](https://leetcode.com/problems/two-sum/) – [solution](src/main/kotlin/ru/romanow/easy/TwoSum.kt), [test](src/test/kotlin/ru/romanow/easy/TwoSumTest.kt)
@@ -67,5 +67,6 @@
 9. In-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/InOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/InOrderDeepFirstSearchTest.kt)
 10. Post-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearchTest.kt)
 11. Breadth First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/BreadthFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/BreadthFirstSearchTest.kt)
+12. Knuth–Morris–Pratt Algorithm – [solution](src/main/kotlin/ru/romanow/algorithms/KnuthMorrisPrattAlgorithm.kt), [test](src/test/kotlin/ru/romanow/algorithms/KnuthMorrisPrattAlgorithmTest.kt)
 
 [//]: # (@formatter:on)

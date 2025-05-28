@@ -12,9 +12,6 @@ package ru.romanow.medium
  */
 class LongestCommonSubsequence {
     fun longestCommonSubsequence(text1: String, text2: String): Int {
-        var k = 0
-        for (i in text1.indices) {
-        }
         return 0
     }
 }
