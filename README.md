@@ -68,5 +68,6 @@
 10. Post-order Deep First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/PostOrderDeepFirstSearchTest.kt)
 11. Breadth First Search Traversal – [solution](src/main/kotlin/ru/romanow/algorithms/BreadthFirstSearch.kt), [test](src/test/kotlin/ru/romanow/algorithms/BreadthFirstSearchTest.kt)
 12. Knuth–Morris–Pratt Algorithm – [solution](src/main/kotlin/ru/romanow/algorithms/KnuthMorrisPrattAlgorithm.kt), [test](src/test/kotlin/ru/romanow/algorithms/KnuthMorrisPrattAlgorithmTest.kt)
+13. Crc32 – [solution](src/main/kotlin/ru/romanow/algorithms/Crc32.kt), [test](src/test/kotlin/ru/romanow/algorithms/Crc32Test.kt)
 
 [//]: # (@formatter:on)
